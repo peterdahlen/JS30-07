@@ -24,17 +24,16 @@
       { text: 'Nice Nice Nice!', id: 542328 }
     ];
 
-    const isAdult = people.some(function(person) {
-      const currentYear = (new Date()).getFullYear();
-      if(currentYear - person.year >= 19) {
-        return true;
-      }
-    });
-    console.log(isAdult);
-    
-    // Array.prototype.find()
-    // Find is like filter, but instead returns just the one you are looking for
-    // find the comment with the ID of 823423
+    // const isAdult = people.some(function(person) {
+    //  const currentYear = (new Date()).getFullYear();
+    //  if(currentYear - person.year >= 19) {
+    //    return true;
+    //  }
+    //});
+    //console.log(isAdult);
+
+    const allAdult = people.every(person => ((new Date()).getFullYear()) - person.year >= 19);
+    console.log({allAdult});
 
     // Array.prototype.findIndex()
     // Find the comment with this ID
